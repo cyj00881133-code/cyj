@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart University Life</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <i class="ri-graduation-cap-fill"></i>
+                <span data-i18n="appName">Smart UniLife</span>
+            </div>
+            <div class="header-actions">
+                <button id="langToggle" class="lang-btn">
+                    <i class="ri-global-line"></i> <span id="currentLang">EN</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Hero Section -->
+            <section class="hero">
+                <h1 data-i18n="heroTitle">Find the perfect place around your campus</h1>
+                <p data-i18n="heroSubtitle">Restaurants, study spaces, and more—all tailored for you.</p>
+                
+                <div class="search-bar">
+                    <i class="ri-search-line"></i>
+                    <input type="text" id="searchInput" data-i18n-placeholder="searchPlaceholder" placeholder="Search for places, e.g., 'Quiet Cafe'">
+                </div>
+            </section>
+
+            <!-- Categories -->
+            <section class="categories">
+                <h2 data-i18n="categoriesTitle">Categories</h2>
+                <div class="category-list">
+                    <button class="category-btn active" data-category="all">
+                        <i class="ri-apps-line"></i>
+                        <span data-i18n="catAll">All</span>
+                    </button>
+                    <button class="category-btn" data-category="restaurant">
+                        <i class="ri-restaurant-line"></i>
+                        <span data-i18n="catRestaurant">Food</span>
+                    </button>
+                    <button class="category-btn" data-category="cafe">
+                        <i class="ri-cup-line"></i>
+                        <span data-i18n="catCafe">Study Cafe</span>
+                    </button>
+                    <button class="category-btn" data-category="hospital">
+                        <i class="ri-hospital-line"></i>
+                        <span data-i18n="catHospital">Hospital</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Map View Mockup -->
+            <section class="map-section">
+                <div class="map-header">
+                    <h2 data-i18n="mapTitle">Nearby Map</h2>
+                    <button class="view-toggle"><i class="ri-map-pin-line"></i></button>
+                </div>
+                <div class="map-container">
+                    <div class="map-placeholder">
+                        <i class="ri-map-2-line"></i>
+                        <p data-i18n="mapInteract">Interactive Map View</p>
+                        <div class="pulse-marker" style="top: 30%; left: 40%;"></div>
+                        <div class="pulse-marker" style="top: 60%; left: 70%;"></div>
+                        <div class="pulse-marker" style="top: 45%; left: 20%;"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Places List -->
+            <section class="places-section">
+                <h2 data-i18n="placesTitle">Recommended Places</h2>
+                <div class="places-grid" id="placesGrid">
+                    <!-- Cards will be injected via JS -->
+                </div>
+            </section>
+        </main>
+        
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <a href="#" class="nav-item active">
+                <i class="ri-home-5-line"></i>
+                <span data-i18n="navHome">Home</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="ri-map-2-line"></i>
+                <span data-i18n="navMap">Map</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="ri-heart-3-line"></i>
+                <span data-i18n="navSaved">Saved</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="ri-user-3-line"></i>
+                <span data-i18n="navProfile">Profile</span>
+            </a>
+        </nav>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
